@@ -25,7 +25,7 @@ class Knight{
     }
 
     findStep(step, ending, queue = [], visited = [step]){
-        if(step[0] === ending[0] && step[1] === ending[1]) return step
+        if(step.space[0] === ending[0] && step.space[1] === ending[1]) return step
 
         this.move.forEach(element => {
             let newStep = [element[0] + step.space[0], element[1]+step.space[1]];
@@ -97,4 +97,4 @@ class Step{
 }
 
 test = new Knight;
-test.knightMoves([1,1], [8,7]);
+test.knightMoves([1,1], [1,1]);
